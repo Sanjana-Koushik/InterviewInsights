@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isNewUser, setIsNewUser] = useState(false);
-    const [authMode, setAuthMode] = useState(null);
+    //const [authMode, setAuthMode] = useState(null);
 
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
@@ -81,7 +81,7 @@ export function AuthProvider({ children }) {
     const signOut = async () => {
         await supabase.auth.signOut();
         setIsNewUser(false);
-        setAuthMode(null);
+        //setAuthMode(null);
     };
 
     const markUserAsRegistered = () => {
