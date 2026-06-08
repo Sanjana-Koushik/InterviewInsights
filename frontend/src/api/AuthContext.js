@@ -57,7 +57,7 @@ export function AuthProvider({ children }) {
         await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: window.location.origin,
+                redirectTo: 'https://interview-insights-tau.vercel.app',
                 queryParams: {
                     prompt: 'select_account'
                 }
@@ -70,7 +70,7 @@ export function AuthProvider({ children }) {
         await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: window.location.origin,
+                redirectTo: 'https://interview-insights-tau.vercel.app',
                 queryParams: {
                     prompt: 'select_account'
                 }
